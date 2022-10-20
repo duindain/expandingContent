@@ -47,14 +47,22 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <!--
+                    Uncomment to show it does work if tied to another UI update
+                    <RowDefinition Height="35"/>
+                    -->
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Row="0" Grid.Column="0" WidthRequest="150" Text="Change Height" Command="{Binding ChangeHeightOfBoxViewCmd}"/>
-                <BoxView Grid.Row="1" Grid.Column="0" HeightRequest="{Binding BoxHeight}" BackgroundColor="BlueViolet"/>
+                <BoxView Grid.Row="1" Grid.Column="0" HeightRequest="{Binding BoxHeight}" Color="BlueViolet"/>
                 <Button Grid.Row="2" Grid.Column="0" WidthRequest="150" Text="Bottom Content"/>
                 <Label Grid.Row="3" Grid.Column="0" Text="More bottom content, hopefully this reproduces the issue with the content getting squidged and we can wobble it better"/>
+                <!--
+                Uncomment to show it does work if tied to another UI update
+                <Label Grid.Row="4" Grid.Column="0" Text="{Binding BoxHeight}"/>
+                -->
             </Grid>
         </VerticalStackLayout>
     </ScrollView>
